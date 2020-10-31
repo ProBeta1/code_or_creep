@@ -1,11 +1,12 @@
-import * as React from 'react';
-import { Text, View } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
-import Hut from './Hut/Hut';
-import Settings from './Settings/Settings';
-import Time from './Timeline/Timeline';
+import * as React from "react";
+import { Text, View } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import Hut from "./Hut/Hut";
+import Settings from "./Settings/Settings";
+import Time from "./Timeline/Timeline";
+import Code from "./Code/Code";
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -16,13 +17,25 @@ function MyTabs() {
       activeColor="#FF9741"
       inactiveColor="white"
       labelStyle={{ fontSize: 12 }}
-      barStyle={{ backgroundColor: '#153745' }}
+      barStyle={{ backgroundColor: "#153745" }}
     >
+      {/*       
       <Tab.Screen
         name="Hut"
         component={Hut}
         options={{
-          tabBarLabel: 'Home',
+          tabBarLabel: "Home",
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="home" color={color} size={26} />
+          ),
+        }}
+      /> */}
+
+      <Tab.Screen
+        name="Code"
+        component={Code}
+        options={{
+          tabBarLabel: "Code",
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons name="home" color={color} size={26} />
           ),
@@ -32,7 +45,7 @@ function MyTabs() {
         name="Timeline"
         component={Time}
         options={{
-          tabBarLabel: 'Leaderboard',
+          tabBarLabel: "Leaderboard",
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons name="medal" color={color} size={26} />
           ),
@@ -42,7 +55,7 @@ function MyTabs() {
         name="Settings"
         component={Settings}
         options={{
-          tabBarLabel: 'Settings',
+          tabBarLabel: "Settings",
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons name="account" color={color} size={26} />
           ),
@@ -53,7 +66,5 @@ function MyTabs() {
 }
 
 export default function Nav() {
-    return (
-        <MyTabs />
-    );
-  }
+  return <MyTabs />;
+}
