@@ -7,6 +7,7 @@ import Hut from "./Hut/Hut";
 import Settings from "./Settings/Settings";
 import Time from "./Timeline/Timeline";
 import Code from "./Code/Code";
+import Tips from "./Tips/Tips";
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -30,17 +31,17 @@ function MyTabs() {
           ),
         }}
       /> */}
-
       <Tab.Screen
-        name="Code"
-        component={Code}
+        name="Tips"
+        component={Tips}
         options={{
-          tabBarLabel: "Code",
+          tabBarLabel: "Tips",
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons name="home" color={color} size={26} />
           ),
         }}
       />
+
       <Tab.Screen
         name="Timeline"
         component={Time}
@@ -51,6 +52,7 @@ function MyTabs() {
           ),
         }}
       />
+
       <Tab.Screen
         name="Settings"
         component={Settings}
