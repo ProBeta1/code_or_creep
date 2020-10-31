@@ -5,9 +5,6 @@ import styles from './styles';
 import { firebase } from '../../firebase/config'
 import { MaterialCommunityIcons } from '@expo/vector-icons'; 
 
-import { createAlarm } from 'react-native-simple-alarm';
-import moment from 'moment'
-
 
 const Time = () => {
 
@@ -51,22 +48,6 @@ const Time = () => {
           </View>
         )
       }
-
- 
-createAlarm = async () => {
-  try {
-    await createAlarm({
-        active: false,
-        date: moment().format(),
-        message: 'message',
-        snooze: 1,
-      });
-  } catch (e) {}
-}
-
-  useEffect(() => {
-    createAlarm();
-  },[])
 
     return (
         <View style={styles.container}>
