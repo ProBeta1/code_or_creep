@@ -20,22 +20,11 @@ function MyTabs() {
       labelStyle={{ fontSize: 12 }}
       barStyle={{ backgroundColor: "#153745" }}
     >
-      {/*       
       <Tab.Screen
         name="Hut"
         component={Hut}
         options={{
           tabBarLabel: "Home",
-          tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="home" color={color} size={26} />
-          ),
-        }}
-      /> */}
-      <Tab.Screen
-        name="Tips"
-        component={Tips}
-        options={{
-          tabBarLabel: "Tips",
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons name="home" color={color} size={26} />
           ),
