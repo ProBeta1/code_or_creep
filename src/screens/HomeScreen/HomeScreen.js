@@ -15,28 +15,6 @@ export default function HomeScreen(props) {
     const id = firebase.auth().currentUser.uid;
 
 
- 
-
-    const handleNav = () => {
-        // store on firestore
-        if(title!=="")
-            uploadIt();      
-        // navigate , we are done with todays work   
-        props.navigation.navigate("Nav");
-    }
-    const handlePlus = () => {
-        // store on firestore
-        if(title!=="")
-            uploadIt();         
-    }
-
-    const handleDel = () => {
-        setSelectedImage(null);
-             setTitle("");
-             setDes("");
-        props.navigation.navigate("Nav");
-    }
-
     const handleCPress = () => {
         setCplus(!cplus);
     }

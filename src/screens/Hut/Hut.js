@@ -15,16 +15,16 @@ const Hut = () => {
     let user = firebase.auth().currentUser;
 
     
-    const retrieve = async() => {
-        await firebase.firestore().collection(id).get()
-            .then((snap) => {
-                snap.docs.map(doc => {
-                    console.log(doc.data());
-                    list.push(doc.data());
-                })
-            })
+    // const retrieve = async() => {
+    //     await firebase.firestore().collection(id).get()
+    //         .then((snap) => {
+    //             snap.docs.map(doc => {
+    //                 console.log(doc.data());
+    //                 list.push(doc.data());
+    //             })
+    //         })
        
-    }
+    // }
 
     useEffect(() => {
         //retrieve();
